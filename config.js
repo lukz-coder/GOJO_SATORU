@@ -178,7 +178,7 @@ const CONFIG = {
 
     // =================== DEBUG ===================
     DEBUG: {
-        showLandmarks: false,    // Hiện skeleton tay lên màn hình (true/false)
+        showLandmarks: true,    // Hiện skeleton tay lên màn hình (true/false)
     },
 };
 

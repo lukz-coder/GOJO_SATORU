@@ -524,11 +524,22 @@
                         const lm = results.multiHandLandmarks[h];
                         const label = results.multiHandedness[h].label;
                         const isLeft = label === 'Right'; // MP mirrored
-                        const color = isLeft ? '#00ff88' : '#4488ff';
                         const labelText = isLeft ? 'LEFT' : 'RIGHT';
 
-                        // Draw connections
-                        ctx.strokeStyle = 'rgba(255,255,255,0.5)';
+                        // Dynamic color based on active technique
+                        let color;
+                        if (currentTechnique === 'void') {
+                            color = '#00eeff'; // Cyan for Void
+                        } else if (currentTechnique === 'purple' || purpleMode || currentTechnique === 'fusing') {
+                            color = '#bb44ff'; // Purple when fused/fusing
+                        } else if (isLeft) {
+                            color = '#ff3333'; // Red for left hand
+                        } else {
+                            color = '#4488ff'; // Blue for right hand
+                        }
+
+                        // Draw connections (colored to match technique)
+                        ctx.strokeStyle = color + '88'; // Semi-transparent technique color
                         ctx.lineWidth = 2;
                         for (const [a, b] of CONNECTIONS) {
                             const ax = (1 - lm[a].x) * canvas.width;
@@ -545,16 +556,11 @@
                         for (let i = 0; i < lm.length; i++) {
                             const x = (1 - lm[i].x) * canvas.width;
                             const y = lm[i].y * canvas.height;
-                            // Highlight key landmarks
                             const isKey = [4, 8, 12, 16, 20].includes(i); // fingertips
                             ctx.beginPath();
                             ctx.arc(x, y, isKey ? 6 : 3, 0, Math.PI * 2);
-                            ctx.fillStyle = isKey ? color : 'rgba(255,255,255,0.8)';
+                            ctx.fillStyle = isKey ? color : (color + 'CC'); // Key=full, others=80%
                             ctx.fill();
-                            // Label index
-                            ctx.fillStyle = color;
-                            ctx.font = '10px monospace';
-                            ctx.fillText(i, x + 8, y - 5);
                         }
 
                         // Hand label

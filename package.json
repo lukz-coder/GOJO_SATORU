@@ -1,5 +1,5 @@
 {
-  "name": "sat0ru-gojo-techniques",
+  "name": "satoru-gojo-techniques",
   "version": "1.0.0",
   "description": "Interactive WebAR experience visualizing Gojo Satoru's Cursed Techniques using Three.js and Hand Tracking.",
   "main": "index.html",

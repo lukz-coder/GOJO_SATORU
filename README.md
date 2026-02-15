@@ -1,6 +1,6 @@
 # Jujutsu Kaisen: Gojo Satoru — Cursed Technique Visualizer
 
-**SAT0RU SYSTEM** is an interactive WebAR experience that brings Gojo Satoru's limitess cursed techniques to life using your webcam and hand gestures. Powered by **Three.js** and **MediaPipe Hand Tracking**.
+**SATORU SYSTEM** is an interactive WebAR experience that brings Gojo Satoru's limitess cursed techniques to life using your webcam and hand gestures. Powered by **Three.js** and **MediaPipe Hand Tracking**.
 
 ![Demo](https://github.com/justHman/GOJO_SATORU/raw/main/demo.gif)
 *(Note: Add a demo gif if available)*
@@ -60,10 +60,11 @@ You can customize effects in `config.js`:
 *   **Colors & Sizes**: Tweak `RED`, `BLUE`, `PURPLE` settings.
 *   **Warp Speed**: Change `warpSpeed`, `warpDuration` in `VOID` section.
 
-## 🤝 Contributing
+## 🌟 Support & Connect
 
-Pull requests are welcome!
+If you enjoyed this project, please consider:
+- Giving it a ⭐ on GitHub!
+- Sharing your cursed technique videos on social media with `#SAT0RU`
+- Following my work for more anime tech projects!
 
-## 📜 License
-
-[ISC](LICENSE)
+> "Nah, I'd win." - Gojo Satoru

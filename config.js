@@ -6,7 +6,7 @@ const CONFIG = {
 
     // =================== PARTICLES ===================
     // Số hạt mỗi quả cầu (tổng = x2). Cao hơn = đẹp hơn nhưng lag hơn
-    BALL_COUNT: 10000,
+    BALL_COUNT: 100,
 
     // Kích thước base của mỗi hạt particle (Three.js PointsMaterial)
     PARTICLE_BASE_SIZE: 0.3,
